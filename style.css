@@ -312,3 +312,18 @@ a:hover {
     padding-right: 8px;
     line-height: 1.55;
 }
+/* 19. TEXT INPUTS & EDIT BOXES (Territory Description, Settings, etc.) */
+textarea, input[type="text"], input[type="password"], input[type="email"], input[type="number"], select {
+    background: rgba(10, 26, 66, 0.92) !important;
+    color: #f0efff !important;
+    border: 1px solid #8cc2ff !important;
+    border-radius: 10px !important;
+    padding: 8px 10px !important;
+    font-family: 'Mali', cursive !important;
+}
+
+textarea:focus, input[type="text"]:focus, select:focus {
+    outline: none !important;
+    border-color: #e2adff !important;
+    box-shadow: 0 0 10px rgba(192, 78, 255, 0.45) !important;
+}
