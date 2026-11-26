@@ -1,1 +1,238 @@
+/* =========================================================
+   YUSEIBOUSH-INSPIRED SUNSET & BOTANICAL LIODEN DEN CSS
+   ========================================================= */
 
+/* 1. CUTE HANDWRITTEN GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,400;0,600;0,700;1,400&family=Patrick+Hand&display=swap');
+
+/* 2. CUSTOM CURSOR (Must be 32x32px or 64x64px max!) */
+body, a, button, input, select, textarea {
+    cursor: url('https://cdn-icons-png.flaticon.com/128/6426/6426621.png'), auto !important;
+}
+
+/* 3. MAIN BACKGROUND & BODY */
+body {
+    background: url('https://static.vecteezy.com/system/resources/thumbnails/073/836/539/small_2x/cityscape-at-sunset-with-power-lines-and-silhouetted-tree-free-photo.jpg') center center fixed;
+    background-size: cover;
+    background-color: #2b241d;
+    font-family: 'Mali', cursive;
+    color: #fff6eb;
+    font-size: 14px;
+}
+
+/* 4. RECOLORING THE LIODEN LOGO */
+/* Adjust hue-rotate/saturate if you want to shift it more toward green or warm gold */
+.navbar-brand img {
+    filter: hue-rotate(-15deg) saturate(1.4) brightness(1.15) drop-shadow(0 2px 6px rgba(255, 115, 55, 0.6));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.navbar-brand img:hover {
+    transform: scale(1.04);
+    filter: hue-rotate(45deg) saturate(1.5) brightness(1.25);
+}
+
+/* 5. TOPBAR ("Diving into a dreamless sleep...") */
+.topbar {
+    background: linear-gradient(90deg, rgba(45, 62, 46, 0.85), rgba(112, 53, 38, 0.85));
+    border: none;
+    border-bottom: 2px solid #88b07d;
+    color: #fff6eb;
+    border-radius: 0 0 14px 14px;
+}
+.topbar a:link, .topbar a:visited {
+    color: #ffb870 !important;
+}
+.topbar a:hover {
+    color: #a8e09b !important;
+}
+
+/* 6. NAVIGATION BAR */
+.navbar {
+    background: linear-gradient(90deg, rgba(53, 77, 54, 0.88), rgba(163, 74, 46, 0.88));
+    border: 1px solid rgba(168, 224, 155, 0.4);
+    border-radius: 16px;
+    margin-top: 8px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 18px;
+    box-shadow: 0 4px 15px rgba(28, 18, 12, 0.4);
+}
+.navbar li a {
+    color: #fff6eb !important;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+}
+.navbar li a:hover {
+    background: rgba(255, 146, 84, 0.45) !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+/* 7. MAIN FOREGROUND CONTAINER */
+.container.main {
+    background: rgba(34, 41, 33, 0.68);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(168, 224, 155, 0.45);
+    border-radius: 22px;
+    box-shadow: 0 8px 30px rgba(26, 16, 10, 0.65);
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+
+.col-md-9 {
+    background: none;
+}
+
+/* 8. BREADCRUMB BAR (Home / Den) */
+.breadcrumb {
+    background: linear-gradient(90deg, rgba(64, 92, 65, 0.75), rgba(179, 86, 48, 0.75));
+    border: 1px solid rgba(255, 184, 112, 0.5);
+    border-radius: 14px;
+    color: #fff6eb;
+}
+.breadcrumb .active {
+    color: #ffd099;
+    font-weight: 600;
+}
+
+/* 9. HEADERS ("___'s Den", Section Titles) */
+h1 {
+    font-family: 'Patrick Hand', cursive;
+    background: linear-gradient(180deg, #ffd28f 10%, #ff8247 65%, #9bd68d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 54px;
+    filter: drop-shadow(2px 3px 3px rgba(20, 15, 10, 0.85));
+    margin-bottom: 15px;
+}
+h2, h3 {
+    font-family: 'Patrick Hand', cursive;
+    color: #a8e09b;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* 10. LINKS */
+a:link, a:visited {
+    color: #ffb36b;
+    transition: 0.2s ease;
+}
+a:hover {
+    color: #a8e09b;
+    text-decoration: none;
+    text-shadow: 0 0 8px rgba(168, 224, 155, 0.6);
+}
+
+/* 11. TABLES, PRIDE LISTS & KING BOXES (Semi-Transparent & Rounded) */
+.table {
+    background: rgba(42, 54, 43, 0.65);
+    border: 1px solid rgba(168, 224, 155, 0.4);
+    border-radius: 16px;
+    border-collapse: separate;
+    overflow: hidden;
+}
+.table th, .top, .bottom {
+    background: linear-gradient(90deg, rgba(78, 115, 79, 0.85), rgba(194, 92, 48, 0.85)) !important;
+    color: #fffaf2 !important;
+    border: none !important;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 18px;
+}
+.table td, .inner-table .left, .inner-table .right {
+    background: rgba(34, 43, 35, 0.55) !important;
+    border-color: rgba(255, 179, 107, 0.2) !important;
+}
+.inner-table .left {
+    background: rgba(65, 92, 66, 0.55) !important;
+    border-radius: 10px 0 0 10px;
+}
+.inner-table .right {
+    border-radius: 0 10px 10px 0;
+}
+
+/* 12. SIDEBAR PANELS (Right Column) */
+.panel {
+    background: rgba(45, 56, 45, 0.7) !important;
+    border: 1px solid rgba(255, 179, 107, 0.45) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 13. PROGRESS BARS (Hunger, Mood, Energy, EXP) */
+.progress {
+    background: rgba(26, 31, 26, 0.85);
+    border: 1px solid rgba(168, 224, 155, 0.4);
+    border-radius: 12px;
+    height: 16px;
+}
+.progress-bar {
+    background: linear-gradient(90deg, #74b567, #ff8d4d) !important;
+    border-radius: 10px;
+}
+
+/* 14. CAVES, MOUNDS & LION PORTRAITS */
+.cave-grid, .mound-grid {
+    background: rgba(48, 61, 49, 0.75);
+    border: 2px solid rgba(255, 179, 107, 0.5);
+    border-radius: 16px;
+    color: #fff6eb;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.cave-grid:hover, .mound-grid:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(255, 141, 77, 0.4);
+    border-color: #a8e09b;
+}
+.cave-grid img, .mound-grid img {
+    border-radius: 12px;
+}
+
+/* 15. BUTTONS & ALERTS */
+.btn, input[type="submit"], button {
+    background: linear-gradient(135deg, #5d8f5e, #d96b38) !important;
+    border: 1px solid #ffd099 !important;
+    border-radius: 12px !important;
+    color: #ffffff !important;
+    font-family: 'Mali', cursive;
+    transition: 0.2s ease;
+}
+.btn:hover, input[type="submit"]:hover, button:hover {
+    filter: brightness(1.15);
+    transform: scale(1.03);
+}
+.alert {
+    background: linear-gradient(90deg, rgba(78, 115, 79, 0.85), rgba(194, 92, 48, 0.85));
+    border: 1px solid #ffd099;
+    border-radius: 14px;
+    color: #ffffff;
+}
+
+/* 16. CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #232b23;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #74b567, #ff8d4d);
+    border-radius: 10px;
+    border: 2px solid #232b23;
+}
+
+/* 17. FLOATING PAGE DOLL (Stays at bottom corner when scrolling) */
+.pagedoll {
+    position: fixed;
+    bottom: 15px;
+    right: 20px; /* Change 'right' to 'left' if you prefer the bottom-left corner */
+    z-index: 9999;
+    max-width: 160px; /* Adjust size of your page doll here */
+    pointer-events: none; /* Lets you click links underneath transparent parts of the image */
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+    animation: floatDoll 3.5s ease-in-out infinite;
+}
+
+@keyframes floatDoll {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
