@@ -232,7 +232,35 @@ a:hover {
     filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
     animation: floatDoll 3.5s ease-in-out infinite;
 }
+/* 18. CUSTOM ABOUT ME BOX */
+.about-box {
+    background: linear-gradient(135deg, rgba(53, 77, 54, 0.78), rgba(163, 74, 46, 0.72));
+    border: 2px solid rgba(255, 184, 112, 0.55);
+    border-radius: 18px;
+    padding: 18px 22px;
+    margin: 15px auto;
+    max-width: 650px;
+    color: #fff6eb;
+    box-shadow: 0 6px 20px rgba(20, 14, 10, 0.45);
+    text-align: left;
+}
 
+.about-box h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 26px;
+    color: #ffd099;
+    border-bottom: 1px dashed rgba(168, 224, 155, 0.5);
+    padding-bottom: 6px;
+    text-align: center;
+}
+
+.about-scroll {
+    max-height: 180px; /* Makes the text scroll if your bio gets long */
+    overflow-y: auto;
+    padding-right: 8px;
+    line-height: 1.6;
+}
 @keyframes floatDoll {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-8px); }
