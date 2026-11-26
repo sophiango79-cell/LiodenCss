@@ -226,7 +226,8 @@ a:hover {
     bottom: 15px;
     right: 20px; /* Change 'right' to 'left' if you prefer the bottom-left corner */
     z-index: 9999;
-    max-width: 160px; /* Adjust size of your page doll here */
+   width: 220px;
+   height: auto;
     pointer-events: none; /* Lets you click links underneath transparent parts of the image */
     filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
     animation: floatDoll 3.5s ease-in-out infinite;
