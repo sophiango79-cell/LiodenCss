@@ -266,17 +266,19 @@ a:hover {
     50% { transform: translateY(-8px); }
 }
 /* 19. SIDE-BY-SIDE BOXES */
+/* 19. SIDE-BY-SIDE BOXES */
 .box-row {
     display: flex;
-    flex-wrap: wrap; /* Stacks them neatly on smaller screens */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
     max-width: 850px;
-    margin: 15px auto;
+    margin: 45px auto 15px auto; /* Extra top margin leaves room for the sitting doll */
 }
 
 .side-box {
-    flex: 1 1 300px; /* Makes both boxes equal width */
+    position: relative; /* Anchors the sitting page doll to this specific box */
+    flex: 1 1 300px;
     background: linear-gradient(135deg, rgba(53, 77, 54, 0.78), rgba(163, 74, 46, 0.72));
     border: 2px solid rgba(255, 184, 112, 0.55);
     border-radius: 18px;
@@ -284,6 +286,18 @@ a:hover {
     color: #fff6eb;
     box-shadow: 0 6px 20px rgba(20, 14, 10, 0.45);
     text-align: left;
+}
+
+/* SITTING PAGE DOLL ON TOP OF THE ABOUT ME BOX */
+.box-doll {
+    position: absolute;
+    bottom: 96%;          /* Sits right along the top border (adjust % to lower/raise) */
+    left: 18px;           /* Sits on the top-left (change 'left' to 'right' for top-right) */
+    width: 85px;          /* Adjust size of the sitting doll here */
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.45));
 }
 
 .side-box h3 {
